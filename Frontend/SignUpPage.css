@@ -1,0 +1,199 @@
+/* Apply font, margin, box-sizing and padding to all elements */
+* {
+    margin: 0;
+    box-sizing: 0;
+    padding: 0;
+}
+
+/* Style the body element */
+
+
+/* Style the logo */
+.logo {
+    font-size: 2em;
+    user-select: none;
+
+}
+/* Style the navigation links */
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 40px;
+    color: black
+}
+
+/* Style the underline effect of the navigation links */
+.navigation a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -6px;
+    height: 3px;
+    background-color: orangered;
+    border-radius: 5px;
+    transform-origin: left;
+    transform: scaleX(0);
+    /* transition: tranform .5s; */
+}
+
+/* Add the underline effect on hover of the navigation links */
+.navigation a:hover::after{
+    transform: scaleX(1);
+}
+
+/* Style the signup box or container */
+.signup-box {
+    position: relative;
+    background-color: whitesmoke;
+    padding: 3em 5em 3em 5em;
+    border-radius: .5em;
+    border: solid rgb(230, 230, 230);
+    }
+
+
+
+/* Style the heading of the signup form */
+h2 {
+    font-size: 2em;
+    text-align: center;
+}
+
+/* Style the input boxes of the signup form */
+.input-box {
+    position: relative;
+    width: 320px;
+    margin: 30px 0;
+   
+}
+
+/* Style the label for the input boxes */
+.input-box label {
+    position: absolute;
+    left: 25px;
+    transform: translateY(-20%);
+    font-size: 1em;
+    pointer-events: none;
+    bottom: 18px;
+}
+
+/* Style the input boxes of the signup form */
+.input-box input {
+    width: 100%;
+    height: 20px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgb(141, 141, 141);
+    outline: none;
+    font-size: 1em;
+    color: black;
+    padding-left: 20px;
+    padding-right: 5px;
+   text-align: left;
+}
+
+/* Style the icon of the input boxes */
+.input-box .icon {
+    position: absolute;
+    right: 95%;
+    font-size: 1.2em;
+    bottom: 5%;
+}
+
+/* Styling for button */
+button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1 em;
+    color: #000;
+    background-color: orange;
+    font-weight: 500;
+}
+
+button a {
+    text-decoration: none;
+    color: antiquewhite;
+    font-weight: bold;
+}
+
+
+/* Styles for login page link */
+.loginPage-link {
+    font-size: .9em;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+/* link color on hover for login page links */
+.loginPage-link a:hover {
+    color: orange;
+}
+
+/* Styles terms and conditions section */
+.Ts_Cs {
+    margin: -4px 0 14px;
+    font-size: .9em;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Styles link in terms and conditions section */
+.Ts_Cs label a {
+    font-weight: 600; 
+    text-decoration: none;
+    color: orange;
+}
+
+/* Styles checkbox in terms and conditions section */
+.Ts_Cs label input {
+    margin-right: 3px;
+}
+
+/* Styles link in login page footer */
+.loginPage-link p a {
+    font-weight: 600; 
+    text-decoration: none;
+}
+
+/* underline on hover for link in login page footer */
+.loginPage-link p a:hover {
+    text-decoration: underline;
+}
+
+/* underline on hover for link in terms and conditions section */
+.Ts_Cs label a:hover{
+    text-decoration: underline;
+}
+
+/* validators */
+
+#validators{
+    display: none;
+}
+
+
+.wrong{
+    color: red;
+}
+
+.wrong ::before{
+    position: relative;
+    content: "&#10006";
+    left: -35px;
+}
+
+.correct{
+    color: green;
+
+}
+
+.correct::before{
+    position: relative;
+    content: ">&#10004";
+}
